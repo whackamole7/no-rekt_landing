@@ -1,0 +1,107 @@
+@import "./_fonts/_fonts.scss";
+@import "./vars.scss";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 4px;
+}
+
+body {
+	font-family: $common-font;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: $line-height;
+	color: $white;
+	background-color: $bg-color;
+	margin: 0;
+	padding-bottom: 40px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: $line-height;
+	color: $white;
+	margin-top: 0;
+}
+h1, h2 {
+	font-size: 25px;
+	font-family: $title-font;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+h6 {
+	font-size: inherit;
+	font-weight: 500;
+	color: $white;
+	margin-bottom: 0;
+}
+
+p {
+	color: $lgrey;
+	line-height: $line-height;
+}
+
+button {
+	color: $lgrey;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	row-gap: 6px;
+	li {
+		position: relative;
+		padding-left: 15px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0.45em;
+			width: 5px;
+			height: 5px;
+			background-color: $cornflower;
+			border-radius: 50%;
+		}
+	}
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
+	border-radius: 1.5em;
+}
+::-webkit-scrollbar-track {
+  background: $dgrey;
+}
+::-webkit-scrollbar-thumb {
+  background: $cornflower;
+}
+
+body {
+	&::-webkit-scrollbar {
+		width: 4px;
+		height: 4px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $lgrey;
+	}
+	&::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb {
+		border-radius: 0;
+	}
+}
+
+* {
+	-webkit-tap-highlight-color:  transparent; 
+}
+
+@import "./_commonClasses.scss";

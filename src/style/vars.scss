@@ -1,0 +1,62 @@
+@use "sass:color";
+
+/* Colors */
+$white: #fff;
+$white-dimmed: #ccc;
+$cornflower: #6988FF;
+$green: #46956A;
+$red: #C75E4B;
+$yellow: #D99445;
+$lgrey: #747FA6;
+$grey: #3A4466;
+$dgrey: #384263;
+$blue-1: #20224E;
+$blue-2: #181A3C;
+$blue-3: #141637;
+$blue-4: #131531;
+$blue-5: #0D0F29;
+$blue-6: #0B0C26;
+$blue-helper: #151632;
+$blue-new: #272C60;
+$bg-color: #030A21;
+
+
+/* Other */
+$container-width: 1560px;
+$title-font: 'Electrolize', sans-serif;
+$common-font: 'Gantari', sans-serif;
+$line-height: 130%;
+$border-color: rgba(56, 66, 99, 0.25);
+$border-dimmed-color: rgba(56, 66, 99, 0.13);
+$border: 1px solid $border-color;
+$border-dimmed: 1px solid $border-dimmed-color;
+$focus-outline: -webkit-focus-ring-color auto 1px;
+$shadow: 3px 0 15px rgba(6, 13, 33, 0.4);
+
+
+/* Mixins */
+@mixin buttonLike($padding: 5px 10px, $border-radius: 5px) {
+	background-color: $blue-1;
+	border-radius: $border-radius;
+	border: $border;
+	padding: $padding;
+}
+
+@mixin alphaColored($color, $alpha: 0.1, $isBgTerminated: false, $isBorderTerminated: false, $isColorTerminated: false) {
+	@if $isColorTerminated != true {
+		color: $color;
+	}
+	@if $isBgTerminated != true {
+		background-color: color.adjust($color, $alpha: $alpha - 1);
+	}
+	@if $isBorderTerminated != true {
+		border: 1px solid transparent;
+		border-color: color.adjust($color, $alpha: $alpha - 1);
+	}
+}
+@mixin alphaColoredBg($color, $alpha: 0.1) {
+	@include alphaColored($color, $alpha, false, true, true);
+}
+@mixin alphaColoredBorder($color, $alpha: 0.1) {
+	@include alphaColored($color, $alpha, true, false, true);
+}

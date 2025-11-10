@@ -1,0 +1,9 @@
+._container {
+	max-width: $container-width;
+	margin: 0 auto;
+
+	@media (max-width: calc($container-width + 40px)) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
