@@ -1,4 +1,3 @@
-@import "./_fonts/_fonts.scss";
 @import "./vars.scss";
 
 * {
@@ -40,6 +39,11 @@ h2 {
 h3 {
 	font-size: 32px;
 	margin-bottom: 10px;
+}
+
+a {
+	color: $white;
+	text-decoration: none;
 }
 
 p {
@@ -104,3 +108,4 @@ body {
 }
 
 @import "./_commonClasses.scss";
+@import "./animations.scss";

@@ -7,7 +7,7 @@
 			"@blocks/*": ["./src/blocks/*"],
 			"@components/*": ["./src/components/*"],
 			"@layouts/*": ["./src/layouts/*"],
-			"@scss/*": ["./src/style/*"],
+			"@style/*": ["./src/style/*"],
 			"@scripts/*": ["./src/scripts/*"],
 		}
 	}

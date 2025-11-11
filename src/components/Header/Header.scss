@@ -1,0 +1,30 @@
+@import '/src/style/vars.scss';
+
+
+.Header {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	background-color: $border-color;
+	border: $border;
+	border-radius: 20px;
+	padding: 12px 15px;
+
+	&__logo {
+		font-family: $title-font;
+		font-size: 25px;
+		font-weight: 400;
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: center;
+		column-gap: 100px;
+	}
+
+	&__label {
+		display: flex;
+		justify-content: flex-end;
+	}
+}

@@ -1,18 +1,21 @@
 /* Title font */
 @font-face {
-	font-family: 'Nohemi';
-	src: url('./Nohemi/Nohemi-Regular.ttf') format('ttf'),
-		url('./Nohemi/Nohemi-Regular.otf') format('otf'),
-		url('./Nohemi/Nohemi-Regular.woff') format('woff');
+	font-family: "Nohemi";
+	src: url("./Nohemi/Nohemi-Regular.woff2") format("woff2"),
+		url("./Nohemi/Nohemi-Regular.woff") format("woff");
+	font-weight: 400;
 }
 
 /* Common font */
 @font-face {
-	font-family: 'Unageo';
-	src: url('./Unageo/Unageo-Regular.ttf') format('ttf');
+	font-family: "Unageo";
+	src: url("./Unageo/Unageo-Regular.woff2") format("woff2"),
+		url("./Unageo/Unageo-Regular.woff") format("woff");
+	font-weight: 400;
 }
 @font-face {
-	font-family: 'Unageo';
-	src: url('./Unageo/Unageo-Medium.ttf') format('ttf');
+	font-family: "Unageo";
+	src: url("./Unageo/Unageo-Medium.woff2") format("woff2"),
+		url("./Unageo/Unageo-Medium.woff") format("woff");
 	font-weight: 500;
 }
