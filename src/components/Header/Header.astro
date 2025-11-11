@@ -1,5 +1,7 @@
 ---
+import Image from "astro/components/Image.astro";
 import "./Header.scss";
+import icon_lightning from "@img/icons/icon-lightning.svg";
 ---
 
 
@@ -12,12 +14,17 @@ import "./Header.scss";
 		<a href="#faq" class="Header__nav-link">FAQ</a>
 		<a href="#get_started" class="Header__nav-link">Get started</a>
 	</nav>
-	<div class="Header__label">
+	<a
+		class="Header__label anim_glare"
+		href="https://sharwa.finance"
+		target="_blank"
+		rel="noreferrer"
+	>
 		<div class="Header__label-icon">
-
+			<Image src={icon_lightning} alt="Lightning" />
 		</div>
-		<div class="Header__label-text anim_glare">
+		<div class="Header__label-text">
 			Powered by Sharwa.Finance
 		</div>
-	</div>
+	</a>
 </header>

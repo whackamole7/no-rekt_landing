@@ -4,7 +4,6 @@
 .anim {
 	&_glare {
 		position: relative;
-		display: block;
 		overflow: hidden;
 		&:before {
 			content: "";
@@ -18,20 +17,20 @@
 				rgba(255, 255, 255, 0) 70%
 			);
 			top: 0;
-			left: -100px;
-			animation: glare 2s infinite linear;
+			left: -200px;
+			animation: glare 4s infinite linear;
 		}
 	}
 }
 
 @keyframes glare {
 	0% {
-		left: -100px;
+		left: -200px;
 	}
 	20% {
-		left: 100%;
+		left: 200%;
 	}
 	100% {
-		left: 100%;
+		left: 200%;
 	}
 }

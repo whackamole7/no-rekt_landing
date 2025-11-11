@@ -70,10 +70,14 @@ ul {
 			top: 0.45em;
 			width: 5px;
 			height: 5px;
-			background-color: $cornflower;
+			background-color: $violet;
 			border-radius: 50%;
 		}
 	}
+}
+
+img {
+	display: block;
 }
 
 ::-webkit-scrollbar {
@@ -87,7 +91,7 @@ ul {
   background: $dgrey;
 }
 ::-webkit-scrollbar-thumb {
-  background: $cornflower;
+  background: $violet;
 }
 
 body {

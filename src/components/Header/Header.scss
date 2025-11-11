@@ -4,7 +4,7 @@
 .Header {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr 3fr 1fr;
 	align-items: center;
 	background-color: $border-color;
 	border: $border;
@@ -12,19 +12,36 @@
 	padding: 12px 15px;
 
 	&__logo {
+		width: max-content;
 		font-family: $title-font;
 		font-size: 25px;
 		font-weight: 400;
+		margin-left: 25px;
 	}
 
 	&__nav {
 		display: flex;
 		justify-content: center;
 		column-gap: 100px;
+		&-link {
+			transition: color .2s ease;
+			@media (hover: hover) and (pointer: fine) {
+				&:hover, &:focus-visible {
+					color: $blue;
+				}
+			}
+		}
 	}
 
 	&__label {
 		display: flex;
-		justify-content: flex-end;
+		height: auto;
+		width: max-content;
+		align-items: center;
+		column-gap: 10px;
+		border-radius: 15px;
+		background: linear-gradient(97deg, rgba(255, 255, 255, 0.10) 4.64%, rgba(255, 255, 255, 0.05) 97.35%);
+		padding: 8px 10px 8px 8px;
+		margin-left: auto;
 	}
 }
