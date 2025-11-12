@@ -24,11 +24,12 @@
 		display: flex;
 		justify-content: center;
 		column-gap: 100px;
+		white-space: nowrap;
 		&-link {
 			transition: color .2s ease;
 			@media (hover: hover) and (pointer: fine) {
 				&:hover, &:focus-visible {
-					color: $blue;
+					color: $lgrey;
 				}
 			}
 		}
@@ -45,4 +46,12 @@
 		padding: 8px 10px 8px 8px;
 		margin-left: auto;
 	}
+
+	@media (max-width: 1200px) {
+		&__nav {
+			column-gap: 60px;
+		}
+	}
+
+	
 }
