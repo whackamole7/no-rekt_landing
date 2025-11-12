@@ -1,8 +1,6 @@
 ---
 import Header from "@components/Header/Header.astro";
 import "./MainBlock.scss";
-import Image from "astro/components/Image.astro";
-import cursor_blob from "@img/background/main-block-cursor-blob.png";
 ---
 
 <div class="MainBlock block">
@@ -14,9 +12,7 @@ import cursor_blob from "@img/background/main-block-cursor-blob.png";
 			</h1>
 			
 		</div>
-		<div class="MainBlock__cursor-blob">
-			<Image src={cursor_blob} alt="" />
-		</div>
+		<div class="MainBlock__cursor-blob" />
 	</div>
 </div>
 

@@ -20,6 +20,10 @@
 		margin-left: 25px;
 	}
 
+	&__burger-button {
+		display: none;
+	}
+
 	&__nav {
 		display: flex;
 		justify-content: center;
@@ -53,5 +57,13 @@
 		}
 	}
 
-	
+	@media (max-width: 992px) {
+		&__burger-button {
+			display: block;
+		}
+
+		&__burger-button ~ * {
+			display: none;
+		}
+	}
 }

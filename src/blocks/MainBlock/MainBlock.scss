@@ -1,4 +1,4 @@
-@import '/src/style/vars.scss';
+@import "/src/style/vars.scss";
 
 
 .MainBlock {
@@ -24,11 +24,15 @@
 	&__cursor-blob {
 		position: absolute;
 		z-index: 0;
+		left: 0;
+		top: 0;
+		width: 2320px;
+		height: 2320px;
+		background-image: url("/src/img/background/main-block-cursor-blob.webp");
 		opacity: 0;
 		pointer-events: none;
-		transform: translate(-50%, -50%);
 		transition: opacity 0.3s ease;
-		// mix-blend-mode: screen;
+		will-change: transform, opacity;
 		&._active {
 			opacity: 1;
 		}
