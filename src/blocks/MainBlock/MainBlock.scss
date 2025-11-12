@@ -2,5 +2,36 @@
 
 
 .MainBlock {
+	position: relative;
+	justify-content: center;
+	background-image: url("/src/img/background/main-block-bg.jpg");
 	padding: 30px 0;
+	overflow: hidden;
+	min-height: 720px;
+
+	&__body {
+		position: relative;
+		z-index: 1;
+		margin-top: 110px;
+		margin-bottom: 165px;
+	}
+
+	&__title {
+		text-align: center;
+		max-width: 1120px;
+		margin: 0 auto;
+	}
+
+	&__cursor-blob {
+		position: absolute;
+		z-index: 0;
+		opacity: 0;
+		pointer-events: none;
+		transform: translate(-50%, -50%);
+		transition: opacity 0.3s ease;
+		// mix-blend-mode: screen;
+		&._active {
+			opacity: 1;
+		}
+	}
 }
