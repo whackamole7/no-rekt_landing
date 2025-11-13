@@ -80,6 +80,16 @@ img {
 	display: block;
 }
 
+input, select, button, textarea {
+	appearance: none;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	font-size: $font-size;
+	font-family: $common-font;
+	font-weight: $font-weight;
+}
+
 ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
