@@ -3,10 +3,10 @@
 
 .Header {
 	position: relative;
-	z-index: 1;
+	z-index: 100;
 	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
 	align-items: center;
+	grid-template-columns: 1fr 2fr;
 	background-color: $border-color;
 	border: $border;
 	border-radius: 20px;
@@ -20,15 +20,24 @@
 		margin-left: 25px;
 	}
 
-	&__burger-button {
-		display: none;
-		width: 40px;
-		height: 40px;
-		background-image: url("/src/img/icons/icon-burger.svg");
-		background-position: center;
-		transition: background-image .2s ease;
-		&:checked {
-			background-image: url("/src/img/icons/icon-burger-active.svg");
+	&__burger {
+		&-button {
+			display: none;
+			width: 40px;
+			height: 40px;
+			background-image: url("/src/img/icons/icon-burger.svg");
+			background-position: center;
+			transition: background-image .2s ease;
+			margin-left: auto;
+			&:checked {
+				background-image: url("/src/img/icons/icon-burger-active.svg");
+			}
+		}
+		&-content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			column-gap: 30px;
 		}
 	}
 
@@ -38,6 +47,7 @@
 		column-gap: 100px;
 		white-space: nowrap;
 		&-link {
+			display: block;
 			transition: color .2s ease;
 			@media (hover: hover) and (pointer: fine) {
 				&:hover, &:focus-visible {
@@ -66,18 +76,65 @@
 	}
 
 	@media (max-width: 992px) {
-		display: flex;
-		justify-content: space-between;
-		&__burger-button {
-			display: block;
+		position: fixed;
+		// background-color: #361f63;
+		backdrop-filter: blur(8px);
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		&__burger {
+			&-button {
+				display: block;
+				z-index: 10;
+			}
+			&-button:checked + &-content {
+				visibility: visible;
+			}
+			&-content {
+				display: block;
+				visibility: hidden;
+				position: absolute;
+				left: -1px;
+				right: -1px;
+				top: -1px;
+				background: $violet-1;
+				border: $border;
+				border-radius: 15px;
+				&::after {
+					content: "";
+					position: fixed;
+					z-index: -1;
+					width: 100vw;
+					height: 100vh;
+					left: -21px;
+					top: -21px;
+					display: block;
+					background-color: $violet-2;
+					opacity: 0.7;
+				}
+			}
 		}
-
-		&__burger-button ~ * {
-			display: none;
+		&__nav {
+			display: flex;
+			max-width: max-content;
+			flex-direction: column;
+			align-items: flex-end;
+			row-gap: 15px;
+			padding: 95px 15px 0;
+			margin-left: auto;
 		}
+		&__label {
+			margin: 25px 15px 15px auto;
+		}
+	}
 
-		&__burger-button:checkd ~ * {
-			display: block;
+	@media (max-width: 380px) {
+		&__label {
+			width: 100%;
+			border-top: $border;
+			border-bottom: $border;
+			margin: 0;
+			margin-top: 25px;
 		}
 	}
 }
