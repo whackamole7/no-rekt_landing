@@ -118,13 +118,16 @@
 			display: flex;
 			max-width: max-content;
 			flex-direction: column;
-			align-items: flex-end;
-			row-gap: 15px;
-			padding: 95px 15px 0;
+			text-align: right;
+			padding: 88px 15px 0;
 			margin-left: auto;
+			&-link {
+				width: 100%;
+				padding: 7px 0 7px 10px;
+			}
 		}
 		&__label {
-			margin: 25px 15px 15px auto;
+			margin: 18px 15px 15px auto;
 		}
 	}
 
