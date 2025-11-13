@@ -10,45 +10,26 @@ document.addEventListener("DOMContentLoaded", () => {
 		return;
 	}
 
-	let isInside = false;
+	let isActive = false;
+	mainBlock.addEventListener("mousemove", updateBlobPosition);
+	mainBlock.addEventListener("mouseleave", deactivateBlob);
 
-	const tryActivate = (e) => {
-		const rect = mainBlock.getBoundingClientRect();
-		if (
-			e.clientX >= rect.left &&
-			e.clientX <= rect.right &&
-			e.clientY >= rect.top &&
-			e.clientY <= rect.bottom
-		) {
-			isInside = true;
+	// fns
+	function deactivateBlob() {
+		blob.classList.remove("_active");
+		isActive = false;
+	}
+	function updateBlobPosition(e) {
+		if (!isActive) {
+			isActive = true;
 			blob.classList.add("_active");
-			updatePosition(e);
-			document.removeEventListener("mousemove", tryActivate);
 		}
-	};
-	document.addEventListener("mousemove", tryActivate);
-
-	const updatePosition = (e) => {
+		_updatePosition(e);
+	}
+	function _updatePosition(e) {
 		const rect = mainBlock.getBoundingClientRect();
 		const x = e.clientX - rect.left;
 		const y = e.clientY - rect.top;
 		blob.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
-	};
-
-	mainBlock.addEventListener("mouseenter", (e) => {
-		isInside = true;
-		blob.classList.add("_active");
-		updatePosition(e);
-	});
-
-	mainBlock.addEventListener("mousemove", (e) => {
-		if (isInside) {
-			updatePosition(e);
-		}
-	});
-
-	mainBlock.addEventListener("mouseleave", () => {
-		isInside = false;
-		blob.classList.remove("_active");
-	});
+	}
 });
