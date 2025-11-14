@@ -69,6 +69,23 @@
 		margin-left: auto;
 	}
 
+	&__backdrop {
+		content: "";
+		position: fixed;
+		z-index: -1;
+		left: -100vw;
+		top: -100vh;
+		right: -100vw;
+		bottom: -100vh;
+		display: block;
+		background-color: $violet-2;
+		opacity: 0;
+		transition: opacity .2s ease;
+	}
+	&._open &__backdrop {
+		opacity: 0.7;
+	}
+
 	@media (max-width: 1200px) {
 		&__nav {
 			column-gap: 60px;
@@ -88,11 +105,12 @@
 				z-index: 10;
 			}
 			&-button:checked + &-content {
-				visibility: visible;
+				display: block;
+				transform: scale(1);
+				opacity: 1;
 			}
 			&-content {
 				display: block;
-				visibility: hidden;
 				position: absolute;
 				left: -1px;
 				right: -1px;
@@ -100,17 +118,22 @@
 				background: $violet-1;
 				border: $border;
 				border-radius: 15px;
-				&::after {
-					content: "";
-					position: fixed;
-					z-index: -1;
-					width: 100vw;
-					height: 100vh;
-					left: -21px;
-					top: -21px;
-					display: block;
-					background-color: $violet-2;
-					opacity: 0.7;
+				transform: scale(0.5);
+				opacity: 0;
+				transition: transform .2s ease;
+				&._scale-out {
+					animation: scale-out 0.2s forwards;
+				}
+				@keyframes scale-out {
+					0% {
+						opacity: 1;
+						transform: scale(1);
+					}
+					100% {
+						display: none;
+						opacity: 0;
+						transform: scale(0.5);
+					}
 				}
 			}
 		}
