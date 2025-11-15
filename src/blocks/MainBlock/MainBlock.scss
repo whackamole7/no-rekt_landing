@@ -54,6 +54,25 @@
 		}
 	}
 
+	&__buttons {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+		width: 370px;
+		margin: 45px auto 0;
+	}
+	&__button {
+		display: block;
+		flex: 1;
+		text-align: center;
+		border-radius: 15px;
+		padding: 10px;
+		background: linear-gradient(97deg, rgba(255, 255, 255, 0.10) 4.64%, rgba(255, 255, 255, 0.05) 97.35%);
+		&._primary {
+			background: $violet;
+		}
+	}
+
 	&__cursor-blob {
 		position: absolute;
 		z-index: 0;
