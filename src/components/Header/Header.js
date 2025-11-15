@@ -16,15 +16,35 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	function openBurgerContent() {
-		header.classList.add("_open");
-		burgerContent.classList.remove("_scale-out");
+		burgerContent.animate([
+			{ transform: "scale(0.5)", opacity: 0 },
+			{ transform: "scale(1)", opacity: 1 },
+		], ANIM_OPTIONS);
+		backdrop.animate([
+			{ opacity: 0 },
+			{ opacity: 0.7 },
+		], ANIM_OPTIONS);
+		burgerContent.style.display = "block";
+		backdrop.style.display = "block";
 	}
 	function closeBurgerContent() {
-		header.classList.remove("_open");
-		burgerContent.classList.add("_scale-out");
-		setTimeout(() => {
-			burgerContent.classList.remove("_scale-out");
-		}, 200);
+		const burgerContentAnim = burgerContent.animate([
+			{ transform: "scale(1)", opacity: 1 },
+			{ transform: "scale(0.5)", opacity: 0 },
+		], ANIM_OPTIONS);
+		const backdropAnim = backdrop.animate([
+			{ opacity: 0.7 },
+			{ opacity: 0 },
+		], ANIM_OPTIONS);
+		burgerContentAnim.onfinish = () => burgerContent.style.display = "none";
+		backdropAnim.onfinish = () => backdrop.style.display = "none";
+
 		burgerButton.checked = false;
 	}
 });
+
+const ANIM_OPTIONS = {
+	duration: 200,
+	easing: "ease",
+	fill: "forwards",
+}
