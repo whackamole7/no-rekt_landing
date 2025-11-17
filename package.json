@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.15.3"
+    "astro": "^5.15.3",
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
     "sass": "^1.93.3"

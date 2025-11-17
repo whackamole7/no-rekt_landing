@@ -1,6 +1,7 @@
 ---
 import Header from "@components/Header/Header.astro";
 import "./MainBlock.scss";
+import Button from "@components/Button/Button.astro";
 ---
 
 <div class="MainBlock block">
@@ -11,22 +12,12 @@ import "./MainBlock.scss";
 				Borrow up to <br />90% LTV with <span class="_hlight"><span class="_underlined">zero</span> <br />liquidation risk</span>
 			</h1>
 			<div class="MainBlock__buttons">
-				<a
-					class="MainBlock__button _primary"
-					href="https://sharwa.finance"
-					target="_blank"
-					rel="noreferrer"
-				>
+				<Button href="#" isPrimary={true}>
 					Open app
-				</a>
-				<a
-					class="MainBlock__button"
-					href="#"
-					target="_blank"
-					rel="noreferrer"
-				>
+				</Button>
+				<Button href="#">
 					Read docs
-				</a>
+				</Button>
 			</div>
 		</div>
 		<div class="MainBlock__cursor-blob" />

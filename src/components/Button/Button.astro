@@ -1,0 +1,19 @@
+---
+import "./Button.scss";
+import cx from "classnames";
+
+export interface Props {
+	href: string,
+	isPrimary?: boolean,
+}
+const { href, isPrimary } = Astro.props;
+---
+
+<a
+	class={cx("Button", isPrimary && "_primary")}
+	href={href}
+	target="_blank"
+	rel="noreferrer"
+>
+	<slot />
+</a>
