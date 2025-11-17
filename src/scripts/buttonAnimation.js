@@ -57,13 +57,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		button.appendChild(lines);
 
-		button.addEventListener("pointerenter", () => {
+		const startAnimation = () => {
 			button.classList.add("_start");
-		});
-
-		svg.addEventListener("animationend", () => {
+		}
+		const stopAnimation = () => {
 			button.classList.remove("_start");
-		});
+		}
+		button.addEventListener("pointerenter", startAnimation);
+		button.addEventListener("focus", startAnimation);
+		svg.addEventListener("animationend", stopAnimation);
 	});
 
 });
