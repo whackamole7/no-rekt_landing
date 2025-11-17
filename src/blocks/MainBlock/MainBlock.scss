@@ -114,6 +114,16 @@
 			font-size: 40px;
 			margin: 0 20px;
 		}
+		&__buttons {
+			width: 280px;
+			flex-direction: column;
+			row-gap: 15px;
+			margin-left: auto;
+			margin-right: auto;
+			.Button {
+				width: 100%;
+			}
+		}
 	}
 	@media (max-width: 380px) {
 		&__title {
@@ -123,6 +133,10 @@
 			br {
 				display: block;
 			}
+		}
+		&__buttons {
+			width: 100%;
+			margin-top: 30px;
 		}
 	}
 }
