@@ -93,14 +93,20 @@
 		}
 	}
 	@media (max-width: 992px) {
+		min-height: auto;
+		padding: 0;
 		&__body {
-			margin-top: 160px;
+			margin-top: 190px;
+			margin-bottom: 130px;
 		}
 		&__title {
 			font-size: 66px;
 		}
 	}
 	@media (max-width: 768px) {
+		&__body {
+			margin-bottom: 100px;
+		}
 		&__title {
 			font-size: 50px;
 			margin: 0 40px;
@@ -108,7 +114,8 @@
 	}
 	@media (max-width: 480px) {
 		&__body {
-			margin-top: 135px;
+			margin-top: 165px;
+			margin-bottom: 70px;
 		}
 		&__title {
 			font-size: 40px;
@@ -126,6 +133,9 @@
 		}
 	}
 	@media (max-width: 380px) {
+		&__body {
+			margin-bottom: 64px;
+		}
 		&__title {
 			font-size: 31px;
 			text-align: left;

@@ -1,0 +1,40 @@
+@import "/src/style/vars.scss";
+
+
+.PerksBlock {
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 30px;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+		background-color: $violet-1;
+		border: $border;
+		border-radius: 30px;
+		padding: 40px;
+		&:first-child {
+			grid-row: 1/3;
+		}
+		&-pic {
+			position: relative;
+			.anim_glare {
+				position: absolute;
+				left: 478px;
+				top: 276px;
+				display: inline-block;
+				border-radius: 20px;
+			}
+		}
+		&-info {
+			align-self: flex-start;
+		}
+		&-text {
+			color: $lgrey;
+		}
+	}
+}

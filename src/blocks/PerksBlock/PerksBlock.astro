@@ -1,0 +1,51 @@
+---
+import "./PerksBlock.scss";
+import perk_1 from "@img/blocks/perks/perk-1.svg";
+import perk_2 from "@img/blocks/perks/perk-2.svg";
+import perk_3 from "@img/blocks/perks/perk-3.svg";
+import perk_1_glare from "@img/blocks/perks/perk-1-glare-element.svg";
+import circles from "@img/lottie/circles.lottie";
+import Image from "astro/components/Image.astro";
+---
+
+<div class="PerksBlock block">
+	<div class="_container">
+		<h2 class="PerksBlock__title">
+			Perks That Keep You Safe
+		</h2>
+		<div class="PerksBlock__items">
+			<div class="PerksBlock__item">
+				<div class="PerksBlock__item-pic">
+					<Image src={perk_1} alt="diagram of profit" />
+					<div class="anim_glare">
+						<Image src={perk_1_glare} alt="up to 90% LTV" />
+					</div>
+				</div>
+				<div class="PerksBlock__item-info">
+					<h3 class="PerksBlock__item-title">Higher LTV</h3>
+					<div class="PerksBlock__item-text">Borrow up to 90% of your collateral value, maximizing capital efficiency and maintaining access to your funds</div>
+				</div>
+			</div>
+			<div class="PerksBlock__item">
+				<div class="PerksBlock__item-pic">
+					<Image src={perk_2} alt="market volatility illustration" />
+				</div>
+				<div class="PerksBlock__item-info">
+					<h3 class="PerksBlock__item-title">No Liquidations</h3>
+					<div class="PerksBlock__item-text">Your position is never liquidated, regardless of market volatility</div>
+				</div>
+			</div>
+			<div class="PerksBlock__item">
+				<div class="PerksBlock__item-pic">
+					<Image src={perk_3} alt="two types of protection from 7 to 90 days" />
+					<dotlottie-player
+						src={circles}
+						autoplay
+						loop
+						mode="normal"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
