@@ -4,7 +4,8 @@ import perk_1 from "@img/blocks/perks/perk-1.svg";
 import perk_2 from "@img/blocks/perks/perk-2.svg";
 import perk_3 from "@img/blocks/perks/perk-3.svg";
 import perk_1_glare from "@img/blocks/perks/perk-1-glare-element.svg";
-import circles from "@img/lottie/circles.lottie";
+import circles from "@img/lottie/circles.json?url";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 import Image from "astro/components/Image.astro";
 ---
 
@@ -38,13 +39,13 @@ import Image from "astro/components/Image.astro";
 			<div class="PerksBlock__item">
 				<div class="PerksBlock__item-pic">
 					<Image src={perk_3} alt="two types of protection from 7 to 90 days" />
-					<dotlottie-player
-						src={circles}
-						autoplay
-						loop
-						mode="normal"
-					/>
 				</div>
+				<LottieAnimation
+					class="PerksBlock__item-lottie"
+					src={circles}
+					autoplay="visible"
+					loop
+				/>
 			</div>
 		</div>
 	</div>
