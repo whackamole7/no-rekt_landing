@@ -2,6 +2,7 @@
 
 
 .PerksBlock {
+	background-color: $violet-2;
 	&__items {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
