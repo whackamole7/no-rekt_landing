@@ -1,12 +1,15 @@
 ---
 import "./PerksBlock.scss";
-import perk_1 from "@img/blocks/perks/perk-1.svg";
-import perk_2 from "@img/blocks/perks/perk-2.svg";
-import perk_3 from "@img/blocks/perks/perk-3.svg";
-import perk_1_glare from "@img/blocks/perks/perk-1-glare-element.svg";
+import perk_1 from "@img/blocks/perks/perk-1.svg?url";
+import perk_1_mobile from "@img/blocks/perks/perk-1_mobile.svg?url";
+import perk_2 from "@img/blocks/perks/perk-2.svg?url";
+import perk_2_mobile from "@img/blocks/perks/perk-2_mobile.svg?url";
+import perk_3 from "@img/blocks/perks/perk-3.svg?url";
+import perk_3_mobile from "@img/blocks/perks/perk-3_mobile.svg?url";
+import perk_1_glare from "@img/blocks/perks/perk-1-glare-element.svg?url";
+import perk_1_glare_mobile from "@img/blocks/perks/perk-1-glare-element_mobile.svg?url";
 import circles from "@img/lottie/circles.json?url";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import Image from "astro/components/Image.astro";
 ---
 
 <div class="PerksBlock block">
@@ -17,9 +20,21 @@ import Image from "astro/components/Image.astro";
 		<div class="PerksBlock__items">
 			<div class="PerksBlock__item">
 				<div class="PerksBlock__item-pic">
-					<Image src={perk_1} alt="diagram of profit" />
+					<picture>
+						<source srcset={perk_1_mobile} media="(max-width: 768px)" />
+						<img
+							src={perk_1}
+							alt="diagram of profit"
+						/>
+					</picture>
 					<div class="anim_glare">
-						<Image src={perk_1_glare} alt="up to 90% LTV" />
+						<picture>
+							<source srcset={perk_1_glare_mobile} media="(max-width: 768px)" />
+							<img
+								src={perk_1_glare}
+								alt="up to 90% LTV"
+							/>
+						</picture>
 					</div>
 				</div>
 				<div class="PerksBlock__item-info">
@@ -29,7 +44,13 @@ import Image from "astro/components/Image.astro";
 			</div>
 			<div class="PerksBlock__item">
 				<div class="PerksBlock__item-pic">
-					<Image src={perk_2} alt="market volatility illustration" />
+					<picture>
+						<source srcset={perk_2_mobile} media="(max-width: 768px)" />
+						<img
+							src={perk_2}
+							alt="market volatility illustration"
+						/>
+					</picture>
 				</div>
 				<div class="PerksBlock__item-info">
 					<h3 class="PerksBlock__item-title">No Liquidations</h3>
@@ -38,7 +59,13 @@ import Image from "astro/components/Image.astro";
 			</div>
 			<div class="PerksBlock__item">
 				<div class="PerksBlock__item-pic">
-					<Image src={perk_3} alt="two types of protection from 7 to 90 days" />
+					<picture>
+						<source srcset={perk_3_mobile} media="(max-width: 768px)" />
+						<img
+							src={perk_3}
+							alt="two types of protection from 7 to 90 days"
+						/>
+					</picture>
 				</div>
 				<LottieAnimation
 					class="PerksBlock__item-lottie"
