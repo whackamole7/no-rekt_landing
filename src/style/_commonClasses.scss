@@ -13,4 +13,7 @@
 	h2 {
 		text-align: center;
 	}
+	@media (max-width: 480px) {
+		padding: 60px 0 70px;
+	}
 }

@@ -2,5 +2,89 @@
 
 
 .HowBlock {
-	
+	&__steps {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+	&__step {
+		width: 460px;
+		background: $violet-2;
+		border-radius: 30px;
+		border: $border;
+		padding: 40px;
+
+		&-pic {
+			position: relative;
+			width: max-content;
+			margin-bottom: 30px;
+			margin: 0 auto 30px;
+			.anim_glare {
+				position: absolute;
+				top: 136px;
+				left: 315px;
+				display: inline-block;
+				border-radius: 30px;
+				transform: rotate(1deg);
+			}
+		}
+
+		&-nav {
+			display: inline-flex;
+			align-items: center;
+			column-gap: 6px;
+			background-color: $green-2;
+			border-radius: 5px;
+			padding: 6px;
+			margin-bottom: 20px;
+			&-circles {
+				display: flex;
+				align-items: center;
+				column-gap: 4px;
+			}
+			&-circle {
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: $green;
+				opacity: 0.6;
+				&._active {
+					width: 8px;
+					height: 8px;
+					opacity: 1;
+				}
+			}
+		}
+
+		&-text {
+			font-size: 22px;
+			color: $lgrey;
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__step {
+			padding: 30px;
+			&-pic {
+				margin-bottom: 25px;
+				.anim_glare {
+					top: 102px;
+					left: 175px;
+				}
+			}
+			&-text {
+				font-size: 15px;
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__steps {
+			gap: 20px;
+		}
+		&__step {
+			padding: 20px;
+		}
+	}
 }

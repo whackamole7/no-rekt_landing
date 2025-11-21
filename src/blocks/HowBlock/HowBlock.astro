@@ -1,5 +1,12 @@
 ---
 import "./HowBlock.scss";
+import step_1 from "@img/blocks/how/step-1.svg?url";
+import step_1_mobile from "@img/blocks/how/step-1_mobile.svg?url";
+import step_2 from "@img/blocks/how/step-2.svg?url";
+import step_2_glare from "@img/blocks/how/step-2-glare.svg?url";
+import step_2_mobile from "@img/blocks/how/step-2_mobile.svg?url";
+import step_3 from "@img/blocks/how/step-3.svg?url";
+import step_3_mobile from "@img/blocks/how/step-3_mobile.svg?url";
 ---
 
 <div class="HowBlock block">
@@ -7,5 +14,82 @@ import "./HowBlock.scss";
 		<h2 class="HowBlock__title">
 			How It Works
 		</h2>
+		<div class="HowBlock__steps">
+			<div class="HowBlock__step">
+				<div class="HowBlock__step-pic">
+					<picture>
+						<source srcset={step_1_mobile} media="(max-width: 768px)" />
+						<img src={step_1} alt="Depositing collateral illustration" />
+					</picture>
+				</div>
+				<div class="HowBlock__step-nav">
+					<div class="HowBlock__step-nav-text">
+						Step 1
+					</div>
+					<div class="HowBlock__step-nav-circles">
+						<div class="HowBlock__step-nav-circle _active" />
+						<div class="HowBlock__step-nav-circle" />
+						<div class="HowBlock__step-nav-circle" />
+					</div>
+				</div>
+				<h3 class="HowBlock__step-title">
+					Deposit Collateral
+				</h3>
+				<div class="HowBlock__step-text">
+					Deposit ETH as collateral to your lending account
+				</div>
+			</div>
+			<div class="HowBlock__step">
+				<div class="HowBlock__step-pic">
+					<picture>
+						<source srcset={step_2_mobile} media="(max-width: 768px)" />
+						<img src={step_2} alt="Borrowing USDC with no-rekt protection" />
+					</picture>
+					<div class="anim_glare">
+						<img src={step_2_glare} alt="protection is on" />
+					</div>
+				</div>
+				<div class="HowBlock__step-nav">
+					<div class="HowBlock__step-nav-text">
+						Step 2
+					</div>
+					<div class="HowBlock__step-nav-circles">
+						<div class="HowBlock__step-nav-circle" />
+						<div class="HowBlock__step-nav-circle _active" />
+						<div class="HowBlock__step-nav-circle" />
+					</div>
+				</div>
+				<h3 class="HowBlock__step-title">
+					Borrow USDC
+				</h3>
+				<div class="HowBlock__step-text">
+					Enter your loan amount, enable NoRekt Protection, and choose a fixed-term duration
+				</div>
+			</div>
+			<div class="HowBlock__step">
+				<div class="HowBlock__step-pic">
+					<picture>
+						<source srcset={step_3_mobile} media="(max-width: 768px)" />
+						<img src={step_3} alt="Repaying illustration" />
+					</picture>
+				</div>
+				<div class="HowBlock__step-nav">
+					<div class="HowBlock__step-nav-text">
+						Step 3
+					</div>
+					<div class="HowBlock__step-nav-circles">
+						<div class="HowBlock__step-nav-circle" />
+						<div class="HowBlock__step-nav-circle" />
+						<div class="HowBlock__step-nav-circle _active" />
+					</div>
+				</div>
+				<h3 class="HowBlock__step-title">
+					Repay & Withdraw
+				</h3>
+				<div class="HowBlock__step-text">
+					Repay your loan to withdraw your collateral
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

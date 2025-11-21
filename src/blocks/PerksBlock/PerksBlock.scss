@@ -34,6 +34,9 @@
 				border-radius: 20px;
 			}
 		}
+		&-text {
+			font-size: 22px;
+		}
 		&-lottie {
 			position: absolute;
 			left: 50%;
@@ -79,6 +82,9 @@
 					right: -4px;
 					bottom: 22px;
 				}
+			}
+			&-text {
+				font-size: 15px;
 			}
 			&-lottie {
 				width: 400px;
