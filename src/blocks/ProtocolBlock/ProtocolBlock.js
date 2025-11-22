@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		const slidesContainer = block.querySelector(".glide__slides");
 		const cardsContainer = block.querySelector(".ProtocolBlock__table-cards");
 		const cards = cardsContainer.children;
+		
+		createBullets(cards.length)
 		while (cards.length > 0) {
 			const card = cards[0];
 			const li = document.createElement("li");
@@ -31,7 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
 			type: "slider",
 			perView: 1,
 			gap: 30,
+			rewind: false,
 		}).mount();
+
 		return glide;
+	}
+
+	function createBullets(quantity) {
+		const bulletsContainer = block.querySelector(".glide__bullets");
+		for (let i = 0; i < quantity; i++) {
+			const bullet = document.createElement("div");
+			bullet.className = "glide__bullet";
+			bullet.setAttribute("data-glide-dir", `=${i}`);
+			bulletsContainer.appendChild(bullet);
+		}
 	}
 });

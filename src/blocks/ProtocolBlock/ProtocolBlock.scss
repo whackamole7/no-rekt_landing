@@ -122,12 +122,12 @@
 	@media (max-width: 992px) {
 		&__table {
 			display: block;
-			max-width: 500px;
+			max-width: 536px;
 			margin: 0 auto;
 			&-nav {
 				position: absolute;
 				z-index: 2;
-				bottom: 0;
+				bottom: 28px;
 				left: 30px;
 				&-item {
 					&::after {
@@ -143,6 +143,62 @@
 		}
 		&__glide {
 			display: block;
+			.glide__bullets {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				column-gap: 6px;
+				margin-top: 20px;
+			}
+			.glide__bullet {
+				width: 8px;
+				height: 8px;
+				background-color: $violet-accent-2;
+				border-radius: 50%;
+				transition: all .2s ease;
+				&--active {
+					background-color: $violet;
+					transform: scale(1.33);
+				}
+			}
+		}
+	}
+
+	@media (max-width: 576px) {
+		&__table {
+			max-width: 380px;
+			&-nav, &-card-content {
+				font-size: 15px;
+			}
+			&-card-content {
+				border-radius: 20px;
+			}
+			&-nav {
+				left: 16px;
+				bottom: 21px;
+				&-item {
+					padding: 11px 0;
+				}
+			}
+			&-card {
+				&-value {
+					column-gap: 5px;
+					padding: 16px;
+					img {
+						width: 46px;
+					}
+				}
+			}
+		}
+		&__glide {
+			.glide__bullets {
+				column-gap: 4px;
+				margin-top: 15px;
+			}
+			.glide__bullet {
+				width: 6px;
+				height: 6px;
+			}
 		}
 	}
 }
