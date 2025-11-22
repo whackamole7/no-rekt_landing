@@ -1,5 +1,13 @@
 ---
 import "./ProtocolBlock.scss";
+import icon_LTV from "@img/blocks/protocol/icon-LTV.svg?url";
+import icon_cross from "@img/blocks/protocol/icon-cross.svg?url";
+import icon_structure from "@img/blocks/protocol/icon-structure.svg?url";
+import icon_percent from "@img/blocks/protocol/icon-percent.svg?url";
+import icon_lightning from "@img/blocks/protocol/icon-lightning.svg?url";
+import shields from "@img/blocks/protocol/shields.svg?url";
+import shields_med from "@img/blocks/protocol/shields_med.svg?url";
+
 ---
 
 <div class="ProtocolBlock block">
@@ -7,5 +15,82 @@ import "./ProtocolBlock.scss";
 		<h2 class="ProtocolBlock__title">
 			Protocol Comparison
 		</h2>
+		<div class="ProtocolBlock__table">
+			<div class="ProtocolBlock__table-nav">
+				<div class="ProtocolBlock__table-nav-item">
+					<div class="ProtocolBlock__table-nav-item-icon">
+						<img src={icon_LTV} alt="diagram up icon" />
+					</div>
+					<div class="ProtocolBlock__table-nav-item-title">
+						Maximum LTV
+					</div>
+				</div>
+				<div class="ProtocolBlock__table-nav-item">
+					<div class="ProtocolBlock__table-nav-item-icon">
+						<img src={icon_cross} alt="cross icon" />
+					</div>
+					<div class="ProtocolBlock__table-nav-item-title">
+						Liquidation Risk
+					</div>
+				</div>
+				<div class="ProtocolBlock__table-nav-item">
+					<div class="ProtocolBlock__table-nav-item-icon">
+						<img src={icon_structure} alt="structure icon" />
+					</div>
+					<div class="ProtocolBlock__table-nav-item-title">
+						Loan Structure
+					</div>
+				</div>
+				<div class="ProtocolBlock__table-nav-item">
+					<div class="ProtocolBlock__table-nav-item-icon">
+						<img src={icon_percent} alt="percent icon" />
+					</div>
+					<div class="ProtocolBlock__table-nav-item-title">
+						Interest Rate
+					</div>
+				</div>
+			</div>
+			<div class="ProtocolBlock__table-card _outstanding">
+				<div class="ProtocolBlock__table-card-title">
+					NO-REKT
+					<img src={icon_lightning} alt="lightning icon" />
+				</div>
+				<div class="ProtocolBlock__table-card-content">
+					<div class="ProtocolBlock__table-card-value">
+						90%
+					</div>
+					<div class="ProtocolBlock__table-card-value _hlight">
+						None
+						<img src={shields} alt="3/3 green shields" />
+					</div>
+					<div class="ProtocolBlock__table-card-value">
+						Variable
+					</div>
+					<div class="ProtocolBlock__table-card-value">
+						Fixed
+					</div>
+				</div>
+			</div>
+			<div class="ProtocolBlock__table-card">
+				<div class="ProtocolBlock__table-card-title">
+					Other Protocols
+				</div>
+				<div class="ProtocolBlock__table-card-content">
+					<div class="ProtocolBlock__table-card-value _hlight">
+						80%
+					</div>
+					<div class="ProtocolBlock__table-card-value">
+						Yes
+						<img src={shields_med} alt="2/3 yellow shields" />
+					</div>
+					<div class="ProtocolBlock__table-card-value">
+						Variable
+					</div>
+					<div class="ProtocolBlock__table-card-value">
+						Variable
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

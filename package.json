@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.7.1",
     "astro": "^5.15.3",
     "astro-integration-lottie": "^0.3.2",
     "classnames": "^2.5.1",
