@@ -3,4 +3,31 @@
 
 .ProtocolBlock {
 	background-color: $violet-2;
+
+	&__table {
+		display: grid;
+		grid-template-columns: 1fr 3fr 3fr;
+		gap: 30px;
+
+		&-nav {
+			&-item {
+				position: relative;
+				display: flex;
+				align-items: center;
+				column-gap: 10px;
+				color: $lgrey;
+				padding: 30px 0;
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					display: block;
+					height: 1px;
+					background-color: $border-color;
+				}
+			}
+		}
+	}
 }
