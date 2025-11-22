@@ -50,47 +50,64 @@ import shields_med from "@img/blocks/protocol/shields_med.svg?url";
 					</div>
 				</div>
 			</div>
-			<div class="ProtocolBlock__table-card _outstanding">
-				<div class="ProtocolBlock__table-card-title">
-					NO-REKT
-					<img src={icon_lightning} alt="lightning icon" />
+			<div class="ProtocolBlock__table-cards">
+				<div class="ProtocolBlock__table-card">
+					<div class="ProtocolBlock__table-card-title">
+						NO-REKT
+						<img src={icon_lightning} alt="lightning icon" />
+					</div>
+					<div class="ProtocolBlock__table-card-content">
+						<div class="ProtocolBlock__table-card-value">
+							<span class="_hlight">
+								90%
+							</span>
+						</div>
+						<div class="ProtocolBlock__table-card-value">
+							None
+							<img src={shields} alt="3/3 green shields" />
+						</div>
+						<div class="ProtocolBlock__table-card-value">
+							Variable
+						</div>
+						<div class="ProtocolBlock__table-card-value">
+							Fixed
+						</div>
+					</div>
 				</div>
-				<div class="ProtocolBlock__table-card-content">
-					<div class="ProtocolBlock__table-card-value">
-						90%
+				<div class="ProtocolBlock__table-card _dimmed">
+					<div class="ProtocolBlock__table-card-title">
+						Other Protocols
 					</div>
-					<div class="ProtocolBlock__table-card-value _hlight">
-						None
-						<img src={shields} alt="3/3 green shields" />
-					</div>
-					<div class="ProtocolBlock__table-card-value">
-						Variable
-					</div>
-					<div class="ProtocolBlock__table-card-value">
-						Fixed
+					<div class="ProtocolBlock__table-card-content">
+						<div class="ProtocolBlock__table-card-value">
+							<span class="_hlight">
+								80%
+							</span>
+						</div>
+						<div class="ProtocolBlock__table-card-value">
+							Yes
+							<img src={shields_med} alt="2/3 yellow shields" />
+						</div>
+						<div class="ProtocolBlock__table-card-value">
+							Variable
+						</div>
+						<div class="ProtocolBlock__table-card-value">
+							Variable
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="ProtocolBlock__table-card">
-				<div class="ProtocolBlock__table-card-title">
-					Other Protocols
-				</div>
-				<div class="ProtocolBlock__table-card-content">
-					<div class="ProtocolBlock__table-card-value _hlight">
-						80%
-					</div>
-					<div class="ProtocolBlock__table-card-value">
-						Yes
-						<img src={shields_med} alt="2/3 yellow shields" />
-					</div>
-					<div class="ProtocolBlock__table-card-value">
-						Variable
-					</div>
-					<div class="ProtocolBlock__table-card-value">
-						Variable
-					</div>
+			<div class="ProtocolBlock__glide glide">
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides">
+						<!-- .ProtocolBlock__table-cards are appended here on window width <992px -->
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script>
+	import "./ProtocolBlock.js";
+</script>
