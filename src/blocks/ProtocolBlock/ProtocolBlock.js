@@ -12,6 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		glide.on("swipe.end", () => {
 			nav.classList.remove("_hidden");
 		});
+		glide.on("move", () => {
+			nav.classList.add("_hidden");
+		});
+		glide.on("move.after", () => {
+			nav.classList.remove("_hidden");
+		});
 	}
 
 	function activateGlide() {
