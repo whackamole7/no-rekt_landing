@@ -65,8 +65,57 @@
 		}
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 992px) {
 		&__cards {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		&__card {
+			display: flex;
+			width: 100%;
+			min-width: auto;
+			min-height: auto;
+			flex-direction: column;
+			background-color: $violet-2;
+			border-radius: 30px;
+			border: $border;
+			padding: 35px 40px;
+			&-front, &-back {
+				position: static;
+				display: block;
+				background-color: transparent;
+				border-radius: 0;
+				border: none;
+				transform: none;
+				padding: 0;
+			}
+			&:hover &-front, &:hover &-back, &:focus-visible &-front, &:focus-visible &-back {
+				transform: none;
+			}
+			&-front {
+				&::before {
+					margin-bottom: 50px;
+				}
+			}
+			&-back {
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__card {
+			font-size: 15px;
+			padding: 25px 30px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__card {
+			border-radius: 20px;
+			padding: 20px;
 		}
 	}
 }

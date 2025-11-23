@@ -34,6 +34,7 @@
 			display: inline-flex;
 			align-items: center;
 			column-gap: 6px;
+			font-size: 15px;
 			background-color: $green-2;
 			border-radius: 5px;
 			padding: 6px;
@@ -83,6 +84,7 @@
 			gap: 20px;
 		}
 		&__step {
+			border-radius: 20px;
 			padding: 20px;
 		}
 	}
