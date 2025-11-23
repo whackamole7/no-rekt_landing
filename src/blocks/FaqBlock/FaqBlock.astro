@@ -1,0 +1,49 @@
+---
+import "./FaqBlock.scss";
+---
+
+<div class="FaqBlock block">
+	<div class="_container">
+		<h2 class="FaqBlock__title">
+			FAQ
+		</h2>
+		<div class="FaqBlock__cards">
+			<button class="FaqBlock__card">
+				<div class="FaqBlock__card-front">
+					<h3 class="FaqBlock__card-question">
+						How does NO-REKT prevent liquidations?
+					</h3>
+				</div>
+				<div class="FaqBlock__card-back">
+					<div class="FaqBlock__card-answer">
+						Our protocol uses a fixed-term loan structure with built-in protection mechanism that ensure your position is never liquidated, regardless of market volatility
+					</div>
+				</div>
+			</button>
+			<button class="FaqBlock__card">
+				<div class="FaqBlock__card-front">
+					<h3 class="FaqBlock__card-question">
+						What assets can I use as collateral?
+					</h3>
+				</div>
+				<div class="FaqBlock__card-back">
+					<div class="FaqBlock__card-answer">
+						Currently, we support ETH as collateral. Additional assets will be supported in future protocol updates
+					</div>
+				</div>
+			</button>
+			<button class="FaqBlock__card">
+				<div class="FaqBlock__card-front">
+					<h3 class="FaqBlock__card-question">
+						How is the fee calculated?
+					</h3>
+				</div>
+				<div class="FaqBlock__card-back">
+					<div class="FaqBlock__card-answer">
+						Fees are fixed percentages based on your chosen loan duration. Shorter terms have lower rates, while longer terms have higher rates. All fees are transparent and shown upfront
+					</div>
+				</div>
+			</button>
+		</div>
+	</div>
+</div>
