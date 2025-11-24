@@ -51,6 +51,7 @@
 	&__button {
 		position: relative;
 		z-index: 1;
+		transition: color .2s ease;
 		&-lottie {
 			position: absolute;
 			z-index: 0;
@@ -60,6 +61,11 @@
 			height: 550px;
 			transform: translateX(calc(-50% + 10px));
 			opacity: 0.6;
+		}
+		@media (hover: hover) and (pointer: fine) {
+			&:hover, &:focus-visible {
+				color: $lgrey;
+			}
 		}
 	}
 }
