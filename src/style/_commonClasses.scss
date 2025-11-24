@@ -17,3 +17,20 @@
 		padding: 60px 0 70px;
 	}
 }
+
+.underlined {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -5px;
+		display: block;
+		height: 9px;
+		background-image: url("/src/img/decorations/underline.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+}

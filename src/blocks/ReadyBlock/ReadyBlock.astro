@@ -1,9 +1,32 @@
 ---
 import "./ReadyBlock.scss";
+import circles_white from "@img/lottie/circles_white.json?url";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 ---
 
 <div class="ReadyBlock block">
 	<div class="_container">
-		
+		<div class="ReadyBlock__content">
+			<h2 class="ReadyBlock__title">
+				Ready to <span class="underlined">get started?</span>
+			</h2>
+			<div class="ReadyBlock__text">
+				Connect your wallet to start borrowing with zero liquidation risk
+			</div>
+			<div class="ReadyBlock__button-container">
+				<a
+					class="ReadyBlock__button"
+					href="#"
+				>
+					Open app
+				</a>
+				<LottieAnimation
+					class="ReadyBlock__button-lottie"
+					src={circles_white}
+					autoplay="visible"
+					loop
+				/>
+			</div>
+		</div>
 	</div>
 </div>

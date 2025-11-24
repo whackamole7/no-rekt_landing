@@ -3,4 +3,63 @@
 
 .ReadyBlock {
 	background-color: $violet-2;
+
+	&__content {
+		position: relative;
+		text-align: center;
+		border-radius: 30px;
+		overflow: hidden;
+		padding: 68px 25px 25px;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 0;
+			background-color: $blue-2;
+			opacity: 0.5;
+		}
+		& > * {
+			position: relative;
+		}
+	}
+
+	&__title {
+		z-index: 1;
+		margin-bottom: 15px;
+		.underlined {
+			position: relative;
+			&::before {
+				right: 10px;
+				bottom: -18px;
+				height: 13px;
+			}
+		}
+	}
+
+	&__text {
+		z-index: 1;
+		color: $lgrey;
+	}
+
+	&__button-container {
+		position: relative;
+		margin-top: 105px;
+	}
+	&__button {
+		position: relative;
+		z-index: 1;
+		&-lottie {
+			position: absolute;
+			z-index: 0;
+			left: 50%;
+			top: calc(100% - 260px);
+			width: 550px;
+			height: 550px;
+			transform: translateX(calc(-50% + 10px));
+			opacity: 0.6;
+		}
+	}
 }
