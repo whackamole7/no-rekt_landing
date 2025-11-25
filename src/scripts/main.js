@@ -1,1 +1,1 @@
-import "./_buttonAnimation.js";
+import "./_animationOutline.js";

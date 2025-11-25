@@ -26,20 +26,21 @@ document.addEventListener("DOMContentLoaded", () => {
 		return svg;
 	};
 
-	document.querySelectorAll(".Button").forEach(button => {
-		const style = getComputedStyle(button);
+	document.querySelectorAll(".anim_outline").forEach(el => {
+		const style = getComputedStyle(el);
 
 		const lines = document.createElement("div");
 
-		lines.classList.add("Button__lines");
+		lines.classList.add("anim_outline__lines");
 
 		const groupTop = document.createElement("div");
 		const groupBottom = document.createElement("div");
 
+		const radius = el.getAttribute("data-anim-radius");
 		const svg = createSVG(
-			button.offsetWidth,
-			button.offsetHeight,
-			parseInt(style.borderRadius, 10)
+			el.offsetWidth,
+			el.offsetHeight,
+			radius ?? parseInt(style.borderRadius, 10)
 		);
 
 		groupTop.appendChild(svg);
@@ -55,17 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		lines.appendChild(groupTop);
 		lines.appendChild(groupBottom);
 
-		button.appendChild(lines);
+		el.appendChild(lines);
 
 		const startAnimation = () => {
-			button.classList.add("_start");
+			el.classList.add("_start");
 		}
 		const stopAnimation = () => {
-			button.classList.remove("_start");
+			el.classList.remove("_start");
 		}
-		button.addEventListener("pointerenter", startAnimation);
-		button.addEventListener("focus", startAnimation);
+		el.addEventListener("pointerenter", startAnimation);
+		el.addEventListener("focus", startAnimation);
 		svg.addEventListener("animationend", stopAnimation);
 	});
-
 });

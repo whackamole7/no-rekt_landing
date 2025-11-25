@@ -10,7 +10,7 @@ const { href, isPrimary } = Astro.props;
 ---
 
 <a
-	class={cx("Button", isPrimary && "_primary")}
+	class={cx("Button anim_outline", isPrimary && "_primary")}
 	href={href}
 	{/* target="_blank"
 	rel="noreferrer" */}

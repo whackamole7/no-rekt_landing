@@ -1,69 +1,86 @@
 ---
 import "./Footer.scss";
+import icon_1 from "@img/blocks/footer/icon-1.svg?url";
+import icon_2 from "@img/blocks/footer/icon-2.svg?url";
+import icon_3 from "@img/blocks/footer/icon-3.svg?url";
+import icon_twitter from "@img/blocks/footer/icon-twitter.svg?url";
+import icon_gitbook from "@img/blocks/footer/icon-gitbook.svg?url";
+import icon_discord from "@img/blocks/footer/icon-discord.svg?url";
+import icon_github from "@img/blocks/footer/icon-github.svg?url";
+import icon_mirror from "@img/blocks/footer/icon-mirror.svg?url";
 ---
 
-<div class="Footer">
+<div class="Footer block">
 	<div class="_container">
-		<div class="Footer__slogans">
-			<div class="Footer__slogan">
-				<div class="Footer__slogan-text">
-					High LTV
+		<div class="Footer__content">
+			<div class="Footer__text">
+				<div class="Footer__slogans">
+					<div class="Footer__slogan">
+						<div class="Footer__slogan-text">
+							High LTV
+						</div>
+						<div class="Footer__slogan-icon anim_glare">
+							<img src={icon_1} alt="lightning green icon" />
+						</div>
+					</div>
+					<div class="Footer__slogan">
+						<div class="Footer__slogan-text">
+							Low Drama
+						</div>
+						<div class="Footer__slogan-icon anim_glare">
+							<img src={icon_2} alt="lotus green icon" />
+						</div>
+					</div>
+					<div class="Footer__slogan">
+						<div class="Footer__slogan-text">
+							<span class="underlined">Zero</span> Liquidation
+						</div>
+						<div class="Footer__slogan-icon anim_glare">
+							<img src={icon_3} alt="shield green icon" />
+						</div>
+					</div>
 				</div>
-				<div class="Footer__slogan-icon">
-
+				<div class="Footer__copyright">
+					© 2025 NoRekt Protocol. All rights reserved.
 				</div>
 			</div>
-			<div class="Footer__slogan">
-				<div class="Footer__slogan-text">
-					Low Drama
-				</div>
-				<div class="Footer__slogan-icon">
-
-				</div>
+			<div class="Footer__socials">
+				<a
+					class="Footer__social anim_outline"
+					data-anim-radius="50%"
+					href="#!"
+				>
+					<img src={icon_twitter} alt="twitter" />
+				</a>
+				<a
+					class="Footer__social anim_outline"
+					data-anim-radius="50%"
+					href="#!"
+				>
+					<img src={icon_gitbook} alt="gibook" />
+				</a>
+				<a
+					class="Footer__social anim_outline"
+					data-anim-radius="50%"
+					href="#!"
+				>
+					<img src={icon_discord} alt="discord" />
+				</a>
+				<a
+					class="Footer__social anim_outline"
+					data-anim-radius="50%"
+					href="#!"
+				>
+					<img src={icon_github} alt="github" />
+				</a>
+				<a
+					class="Footer__social anim_outline"
+					data-anim-radius="50%"
+					href="#!"
+				>
+					<img src={icon_mirror} alt="mirror" />
+				</a>
 			</div>
-			<div class="Footer__slogan">
-				<div class="Footer__slogan-text">
-					Zero Liquidation
-				</div>
-				<div class="Footer__slogan-icon">
-
-				</div>
-			</div>
-		</div>
-		<div class="Footer__copyright">
-			© 2025 NoRekt Protocol. All rights reserved.
-		</div>
-		<div class="Footer_socials">
-			<a
-				class="Footer__social"
-				href="#!"
-			>
-
-			</a>
-			<a
-				class="Footer__social"
-				href="#!"
-			>
-
-			</a>
-			<a
-				class="Footer__social"
-				href="#!"
-			>
-
-			</a>
-			<a
-				class="Footer__social"
-				href="#!"
-			>
-
-			</a>
-			<a
-				class="Footer__social"
-				href="#!"
-			>
-
-			</a>
 		</div>
 	</div>
 </div>

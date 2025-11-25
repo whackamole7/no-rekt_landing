@@ -2,5 +2,54 @@
 
 
 .Footer {
+	padding: 40px 0;
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 40px;
+	}
 	
+	&__slogans {
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+		white-space: nowrap;
+	}
+	&__slogan {
+		display: flex;
+		column-gap: 8px;
+		align-items: flex-end;
+		font-size: 80px;
+		font-family: $title-font;
+		&-icon {
+			border-radius: 50%;
+			transform: translateY(-0.26em);
+		}
+	}
+
+	&__copyright {
+		grid-row: 2/3;
+		font-size: 15px;
+		color: $lgrey;
+		margin-top: 90px;
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+		column-gap: 40px;
+		row-gap: 30px;
+	}
+	&__social {
+		border-radius: 50%;
+		&:nth-child(even) {
+			transform: translateY(50%) translateY(15px);
+		}
+	}
+
+	@media (max-width: 1200px) {
+		
+	}
 }
