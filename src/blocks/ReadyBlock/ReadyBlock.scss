@@ -9,7 +9,7 @@
 		text-align: center;
 		border-radius: 30px;
 		overflow: hidden;
-		padding: 68px 25px 25px;
+		padding: 68px 40px 25px;
 		&::before {
 			content: "";
 			position: absolute;
@@ -29,6 +29,9 @@
 	&__title {
 		z-index: 1;
 		margin-bottom: 15px;
+		br {
+			display: none;
+		}
 		.underlined {
 			position: relative;
 			&::before {
@@ -51,6 +54,7 @@
 	&__button {
 		position: relative;
 		z-index: 1;
+		padding: 40px 40px 15px;
 		transition: color .2s ease;
 		&-lottie {
 			position: absolute;
@@ -66,6 +70,42 @@
 			&:hover, &:focus-visible {
 				color: $lgrey;
 			}
+		}
+		&:active {
+			transition-duration: 0s;
+			color: $blue;
+		}
+	}
+
+	@media (max-width: 576px) {
+		&__content {
+			padding: 50px 20px 15px;
+		}
+		&__button {
+			font-size: 15px;
+
+			&-lottie {
+				width: 400px;
+				height: 400px;
+				top: calc(100% - 195px);
+				transform: translateX(calc(-50% + 7px));
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__title {
+			.underlined {
+				&::before {
+					display: none;
+				}
+			}
+			br {
+				display: block;
+			}
+		}
+		&__button-container {
+			margin-top: 135px;
 		}
 	}
 }

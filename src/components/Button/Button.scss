@@ -10,8 +10,14 @@
 	border-radius: 15px;
 	padding: 10px;
 	background: linear-gradient(97deg, rgba(255, 255, 255, 0.10) 4.64%, rgba(255, 255, 255, 0.05) 97.35%);
+	transition: color .2s ease;
 	&._primary {
 		background: $violet;
+	}
+
+	&:active {
+		transition-duration: 0s;
+		color: $lgrey;
 	}
 	
 	&__lines {

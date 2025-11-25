@@ -12,8 +12,8 @@ const { href, isPrimary } = Astro.props;
 <a
 	class={cx("Button", isPrimary && "_primary")}
 	href={href}
-	target="_blank"
-	rel="noreferrer"
+	{/* target="_blank"
+	rel="noreferrer" */}
 >
 	<slot />
 </a>
