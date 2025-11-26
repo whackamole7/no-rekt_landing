@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "draft": "gh-pages -d dist --nojekyll",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -16,6 +17,7 @@
     "lottie-web": "^5.13.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.93.3"
   }
 }

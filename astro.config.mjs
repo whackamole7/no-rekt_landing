@@ -7,6 +7,7 @@ export default defineConfig({
 	integrations: [
 		lottie(),
 	],
+	base: "/no-rekt_landing",
 	vite: {
 		assetsInclude: ["**/*.lottie"],
 	}
