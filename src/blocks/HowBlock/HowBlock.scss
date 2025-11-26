@@ -30,6 +30,23 @@
 			}
 		}
 
+		&-lottie {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			&._arrow {
+				left: 190px;
+				top: 105px;
+				width: 180px;
+				height: 180px;
+			}
+			&._lock {
+				width: 14px;
+				height: 16px;
+				left: 308px;
+				top: 197px;
+			}
+		}
+
 		&-nav {
 			display: inline-flex;
 			align-items: center;
@@ -71,6 +88,16 @@
 				.anim_glare {
 					top: 102px;
 					left: 175px;
+				}
+			}
+			&-lottie {
+				&._arrow {
+					left: 120px;
+					top: 108px;
+				}
+				&._lock {
+					left: 210px;
+					top: 168px;
 				}
 			}
 			&-text {

@@ -7,6 +7,9 @@ import step_2_glare from "@img/blocks/how/step-2-glare.svg?url";
 import step_2_mobile from "@img/blocks/how/step-2_mobile.svg?url";
 import step_3 from "@img/blocks/how/step-3.svg?url";
 import step_3_mobile from "@img/blocks/how/step-3_mobile.svg?url";
+import arrow from "@img/lottie/arrow.json?url";
+import lock from "@img/lottie/lock.json?url";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 ---
 
 <div class="HowBlock block" id="how">
@@ -21,6 +24,12 @@ import step_3_mobile from "@img/blocks/how/step-3_mobile.svg?url";
 						<source srcset={step_1_mobile} media="(max-width: 768px)" />
 						<img src={step_1} alt="Depositing collateral illustration" />
 					</picture>
+					<LottieAnimation
+						class="HowBlock__step-lottie _arrow"
+						src={arrow}
+						autoplay="visible"
+						loop
+					/>
 				</div>
 				<div class="HowBlock__step-nav">
 					<div class="HowBlock__step-nav-text">
@@ -72,6 +81,12 @@ import step_3_mobile from "@img/blocks/how/step-3_mobile.svg?url";
 						<source srcset={step_3_mobile} media="(max-width: 768px)" />
 						<img src={step_3} alt="Repaying illustration" />
 					</picture>
+					<LottieAnimation
+						class="HowBlock__step-lottie _lock"
+						src={lock}
+						autoplay="visible"
+						loop
+					/>
 				</div>
 				<div class="HowBlock__step-nav">
 					<div class="HowBlock__step-nav-text">
