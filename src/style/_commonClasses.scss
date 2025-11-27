@@ -10,6 +10,12 @@
 
 .block {
 	padding: 110px 0 120px;
+	._container {
+		opacity: 0;
+	}
+	&.Footer ._container {
+		opacity: 1;
+	}
 	h2 {
 		text-align: center;
 	}
