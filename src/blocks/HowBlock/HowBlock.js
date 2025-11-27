@@ -11,12 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		return;
 	}
 
+	const shouldPin = block.scrollHeight - 120 < window.innerHeight;
 	const tl = gsap.timeline({
 		scrollTrigger: {
 			trigger: block,
-			start: "top 30%",
-			end: "top: 0%",
+			start: "top -20px",
+			end: "top: -100%",
 			scrub: true,
+			pin: shouldPin,
 			invalidateOnRefresh: true
 		}
 	});
