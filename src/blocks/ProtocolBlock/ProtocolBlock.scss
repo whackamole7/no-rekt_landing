@@ -15,6 +15,7 @@
 			opacity: 1;
 			white-space: nowrap;
 			transition: opacity .4s ease;
+			pointer-events: none;
 			margin-top: auto;
 			&-item {
 				position: relative;
