@@ -67,8 +67,18 @@
 		column-gap: 10px;
 		border-radius: 15px;
 		background: linear-gradient(97deg, rgba(255, 255, 255, 0.10) 4.64%, rgba(255, 255, 255, 0.05) 97.35%);
+		transition: all .2s ease;
 		padding: 8px 10px 8px 8px;
 		margin-left: auto;
+		@media (hover: hover) and (pointer: fine) {
+			&:hover, &:focus-visible {
+				background-color: rgba(255, 255, 255, 0.04);
+			}
+		}
+		&:active {
+			transition-duration: 0s;
+			color: $lgrey;
+		}
 	}
 
 	&__backdrop {
