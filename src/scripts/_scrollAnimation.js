@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const container = block.querySelector("._container");
 		ScrollTrigger.create({
 			trigger: block,
-			start: "clamp(top 35%)",
+			start: "clamp(top 42%)",
 			once: true,
 			animation: gsap.fromTo(
 				container,
