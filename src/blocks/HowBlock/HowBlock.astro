@@ -22,7 +22,7 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 				<div class="HowBlock__step-pic">
 					<picture>
 						<source srcset={step_1_mobile} media="(max-width: 768px)" />
-						<img src={step_1} alt="Depositing collateral illustration" />
+						<img loading="lazy" src={step_1} alt="Depositing collateral illustration" />
 					</picture>
 					<LottieAnimation
 						class="HowBlock__step-lottie _arrow"
@@ -52,10 +52,10 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 				<div class="HowBlock__step-pic">
 					<picture>
 						<source srcset={step_2_mobile} media="(max-width: 768px)" />
-						<img src={step_2} alt="Borrowing USDC with no-rekt protection" />
+						<img loading="lazy" src={step_2} alt="Borrowing USDC with no-rekt protection" />
 					</picture>
 					<div class="anim_glare">
-						<img src={step_2_glare} alt="protection is on" />
+						<img loading="lazy" src={step_2_glare} alt="protection is on" />
 					</div>
 				</div>
 				<div class="HowBlock__step-nav">
@@ -79,7 +79,7 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 				<div class="HowBlock__step-pic">
 					<picture>
 						<source srcset={step_3_mobile} media="(max-width: 768px)" />
-						<img src={step_3} alt="Repaying illustration" />
+						<img loading="lazy" src={step_3} alt="Repaying illustration" />
 					</picture>
 					<LottieAnimation
 						class="HowBlock__step-lottie _lock"
