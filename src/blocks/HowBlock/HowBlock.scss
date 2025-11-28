@@ -26,13 +26,16 @@
 
 		&-pic {
 			position: relative;
-			width: max-content;
+			max-width: max-content;
 			margin-bottom: 30px;
 			margin: 0 auto 30px;
+			picture img {
+				width: 100%;
+			}
 			.anim_glare {
 				position: absolute;
-				top: 136px;
 				left: 315px;
+				top: 136px;
 				display: inline-block;
 				border-radius: 30px;
 				transform: rotate(1deg);
@@ -89,6 +92,52 @@
 		}
 	}
 
+	@media (max-width: 1480px) {
+		&__step {
+			width: 440px;
+			&-pic {
+				.anim_glare {
+					transform: translate(-23px, -9px);
+				}
+			}
+			&-lottie {
+				&._arrow {
+					width: 160px;
+					height: 160px;
+					left: 179px;
+					top: 100px;
+				}
+				&._lock {
+					left: 291px;
+					top: 185px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1439px) {
+		&__step {
+			width: 460px;
+			&-pic {
+				.anim_glare {
+					transform: none;
+				}
+			}
+			&-lottie {
+				&._arrow {
+					left: 190px;
+					top: 105px;
+					width: 180px;
+					height: 180px;
+				}
+				&._lock {
+					left: 307px;
+					top: 196px;
+				}
+			}
+		}
+	}
+
 	@media (max-width: 768px) {
 		&__step {
 			padding: 30px;
@@ -105,7 +154,7 @@
 					top: 108px;
 				}
 				&._lock {
-					left: 210px;
+					left: 211px;
 					top: 168px;
 				}
 			}
