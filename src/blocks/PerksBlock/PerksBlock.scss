@@ -92,9 +92,7 @@
 					&._shield {
 						left: 89px;
 						top: -11px;
-						img {
-							width: 64px;
-						}
+						mask-image: url("/src/img/blocks/perks/perk-2-glare_mobile.svg");
 					}
 				}
 			}

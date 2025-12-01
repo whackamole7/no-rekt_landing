@@ -1,12 +1,13 @@
 ---
 import "./PerksBlock.scss";
 import perk_1 from "@img/blocks/perks/perk-1.svg?url";
-import perk_1_glare from "@img/blocks/perks/perk-1-glare-element.svg?url";
+import perk_1_glare from "@img/blocks/perks/perk-1-glare.svg?url";
 import perk_1_mobile from "@img/blocks/perks/perk-1_mobile.svg?url";
-import perk_1_glare_mobile from "@img/blocks/perks/perk-1-glare-element_mobile.svg?url";
+import perk_1_glare_mobile from "@img/blocks/perks/perk-1-glare_mobile.svg?url";
 import perk_2 from "@img/blocks/perks/perk-2.svg?url";
 import perk_2_glare from "@img/blocks/perks/perk-2-glare.svg?url";
 import perk_2_mobile from "@img/blocks/perks/perk-2_mobile.svg?url";
+import perk_2_glare_mobile from "@img/blocks/perks/perk-2-glare_mobile.svg?url";
 import perk_3 from "@img/blocks/perks/perk-3.svg?url";
 import perk_3_mobile from "@img/blocks/perks/perk-3_mobile.svg?url";
 import circles from "@img/lottie/circles.json?url";
@@ -53,10 +54,13 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 						/>
 					</picture>
 					<div class="anim_glare _shield">
-						<img loading="lazy"
-							src={perk_2_glare}
-							alt="shielded ETH"
-						/>
+						<picture>
+							<source srcset={perk_2_glare_mobile} media="(max-width: 768px)" />
+							<img loading="lazy"
+								src={perk_2_glare}
+								alt="shielded ETH"
+							/>
+						</picture>
 					</div>
 				</div>
 				<div class="PerksBlock__item-info">
