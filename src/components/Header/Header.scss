@@ -55,10 +55,16 @@
 				&:hover, &:focus-visible {
 					color: $lgrey;
 				}
+				&:active {
+					transition-duration: 0s;
+					color: darken($lgrey, 13);
+				}
 			}
-			&:active {
-				transition-duration: 0s;
-				color: $lgrey;
+			@media (pointer: coarse) {
+				&:active {
+					transition-duration: 0s;
+					color: $lgrey;
+				}
 			}
 		}
 	}

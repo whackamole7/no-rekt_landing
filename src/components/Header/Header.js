@@ -1,3 +1,5 @@
+const BURGER_BREAKPOINT = 992;
+
 document.addEventListener("DOMContentLoaded", () => {
 	const header = document.querySelector(".Header");
 	const burgerButton = header.querySelector(".Header__burger-button");
@@ -14,11 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	backdrop.addEventListener("click", closeBurgerContent);
 
 	const navLinks = burgerContent.querySelectorAll(".Header__nav-link");
-	navLinks.forEach(link => {
-		link.addEventListener("click", () => {
-			setTimeout(closeBurgerContent, 100);
+	const isBurgerShown = window.innerWidth <= BURGER_BREAKPOINT;
+	if (isBurgerShown) {
+		navLinks.forEach(link => {
+			link.addEventListener("click", () => {
+				setTimeout(closeBurgerContent, 100);
+			});
 		});
-	});
+	}
 
 	function openBurgerContent() {
 		burgerContent.animate([
