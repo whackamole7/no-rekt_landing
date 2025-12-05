@@ -21,8 +21,35 @@ document.addEventListener("DOMContentLoaded", () => {
 	window.lenisInstance = lenis;
 
 	gsap.utils.toArray(".block:not(footer)").forEach(block => {
-		const container = block.querySelector("._container");
-		ScrollTrigger.create({
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: block,
+				start: "top 42%",
+				once: true,
+			}
+		});
+		const fromVars = {
+			autoAlpha: 0,
+			y: 80,
+			scale: 0.96,
+		};
+		const toVars = {
+			autoAlpha: 1,
+			y: 0,
+			scale: 1,
+			duration: 0.9,
+			ease: "power3.out"
+		}
+
+		const anims = block.querySelectorAll(".anim_scroll");
+		anims.forEach((anim, i) => {
+			if (!anim) {
+				return;
+			}
+			const isFirst = i === 0;
+			tl.fromTo(anim, fromVars, toVars, !isFirst && "=-0.6");
+		});
+		/* ScrollTrigger.create({
 			trigger: block,
 			start: "clamp(top 42%)",
 			once: true,
@@ -41,6 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
 					ease: "power3.out"
 				}
 			)
-		});
+		}); */
 	});
 });

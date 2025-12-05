@@ -11,8 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	const backdrop = header.querySelector(".Header__backdrop");
-	backdrop.addEventListener("click", () => {
-		closeBurgerContent();
+	backdrop.addEventListener("click", closeBurgerContent);
+
+	const navLinks = burgerContent.querySelectorAll(".Header__nav-link");
+	navLinks.forEach(link => {
+		link.addEventListener("click", () => {
+			setTimeout(closeBurgerContent, 100);
+		});
 	});
 
 	function openBurgerContent() {
