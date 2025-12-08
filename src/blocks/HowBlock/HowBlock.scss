@@ -54,8 +54,8 @@
 			&._lock {
 				width: 14px;
 				height: 16px;
-				left: 308px;
-				top: 197px;
+				left: 307px;
+				top: 196px;
 			}
 		}
 
@@ -154,13 +154,19 @@
 					top: 108px;
 				}
 				&._lock {
-					left: 211px;
+					left: 210px;
 					top: 168px;
 				}
 			}
 			&-text {
 				font-size: 15px;
 			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		&__step {
+			width: 100%;
 		}
 	}
 
@@ -171,6 +177,9 @@
 		&__step {
 			border-radius: 20px;
 			padding: 20px;
+			&-pic {
+				width: max-content;
+			}
 		}
 	}
 }
