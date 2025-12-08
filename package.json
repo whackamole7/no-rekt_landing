@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "draft": "gh-pages -d dist --nojekyll",
+    "production": "echo 'norekt.xyz' > ./dist/CNAME && gh-pages -d dist --nojekyll",
     "preview": "astro preview",
     "astro": "astro"
   },
