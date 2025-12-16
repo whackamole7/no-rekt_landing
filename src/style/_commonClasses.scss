@@ -1,3 +1,5 @@
+@use "./vars" as *;
+
 ._container {
 	max-width: $container-width;
 	margin: 0 auto;

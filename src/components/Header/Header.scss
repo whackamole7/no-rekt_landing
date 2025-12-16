@@ -1,4 +1,5 @@
-@import '/src/style/vars.scss';
+@use "sass:color";
+@use "/src/style/vars" as *;
 
 
 .Header {
@@ -57,7 +58,7 @@
 				}
 				&:active {
 					transition-duration: 0s;
-					color: darken($lgrey, 13);
+					color: color.scale($lgrey, $lightness: -18%);
 				}
 			}
 			@media (pointer: coarse) {

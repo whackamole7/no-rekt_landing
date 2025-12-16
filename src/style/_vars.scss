@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "./_fonts/_fonts.scss";
+@use "./fonts/_fonts.scss" as *;
 
 /* Colors */
 $white: #fff;

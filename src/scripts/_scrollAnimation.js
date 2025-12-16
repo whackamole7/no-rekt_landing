@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				return;
 			}
 			const isFirst = i === 0;
-			tl.fromTo(anim, fromVars, toVars, !isFirst && "=-0.6");
+			tl.fromTo(anim, fromVars, toVars, !isFirst && "=-0.7");
 		});
 		/* ScrollTrigger.create({
 			trigger: block,

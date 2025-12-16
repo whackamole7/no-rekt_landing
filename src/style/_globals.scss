@@ -1,4 +1,4 @@
-@import "./vars.scss";
+@use "./vars.scss" as *;
 
 * {
 	box-sizing: border-box;
@@ -135,6 +135,3 @@ body {
 * {
 	-webkit-tap-highlight-color:  transparent; 
 }
-
-@import "./_commonClasses.scss";
-@import "./_animations.scss";
