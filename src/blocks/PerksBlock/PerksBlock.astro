@@ -8,8 +8,13 @@ import perk_2 from "@img/blocks/perks/perk-2.svg?url";
 import perk_2_glare from "@img/blocks/perks/perk-2-glare.svg?url";
 import perk_2_mobile from "@img/blocks/perks/perk-2_mobile.svg?url";
 import perk_2_glare_mobile from "@img/blocks/perks/perk-2-glare_mobile.svg?url";
-import perk_3 from "@img/blocks/perks/perk-3.svg?url";
-import perk_3_mobile from "@img/blocks/perks/perk-3_mobile.svg?url";
+import perk_3_options from "@img/blocks/perks/perk-3_options.svg?url";
+import perk_3_options_mobile from "@img/blocks/perks/perk-3_options_mobile.svg?url";
+import perk_3_hedge from "@img/blocks/perks/perk-3_hedge.svg?url";
+import perk_3_hedge_mobile from "@img/blocks/perks/perk-3_hedge_mobile.svg?url";
+import perk_3_title from "@img/blocks/perks/perk-3_title.svg?url";
+import perk_3_title_mobile from "@img/blocks/perks/perk-3_title_mobile.svg?url";
+import icon_hint from "@img/icons/icon-hint.svg?url";
 import circles from "@img/lottie/circles.json?url";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 ---
@@ -69,14 +74,52 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 				</div>
 			</div>
 			<div class="PerksBlock__item">
-				<div class="PerksBlock__item-pic">
-					<picture>
-						<source srcset={perk_3_mobile} media="(max-width: 768px)" />
-						<img loading="lazy"
-							src={perk_3}
-							alt="two types of protection from 7 to 90 days"
-						/>
-					</picture>
+				<div class="PerksBlock__item-pic _has-blocks">
+					<div class="PerksBlock__item-pic-block _options" data-tooltip-type="trigger">
+						<picture>
+							<source srcset={perk_3_options_mobile} media="(max-width: 768px)" />
+							<img loading="lazy"
+								src={perk_3_options}
+								alt="Options Fixed Price"
+							/>
+						</picture>
+						<div class="_anchor" data-tooltip-type="anchor">
+							<img loading="lazy"
+								src={icon_hint}
+								alt="Hint"
+							/>
+						</div>
+						<div class="_tooltip" data-tooltip-type="tooltip">
+							Pay a fixed premium <br />and stay protected for <br />a chosen time period
+						</div>
+					</div>
+					<div class="PerksBlock__item-pic-block _hedge" data-tooltip-type="trigger">
+						<picture>
+							<source srcset={perk_3_hedge_mobile} media="(max-width: 768px)" />
+							<img loading="lazy"
+								src={perk_3_hedge}
+								alt="Auto Hedge Pay as you Go"
+							/>
+						</picture>
+						<div class="_anchor" data-tooltip-type="anchor">
+							<img loading="lazy"
+								src={icon_hint}
+								alt="Hint"
+							/>
+						</div>
+						<div class="_tooltip" data-tooltip-type="tooltip">
+							No upfront premium. Costs <br />apply only on hedge entry/<br />exit plus leverage fees
+						</div>
+					</div>
+					<div class="PerksBlock__item-pic-block _title">
+						<picture>
+							<source srcset={perk_3_title_mobile} media="(max-width: 768px)" />
+							<img loading="lazy"
+								src={perk_3_title}
+								alt="two types of protection from 1 to 90 days"
+							/>
+						</picture>
+					</div>
 				</div>
 				<LottieAnimation
 					class="PerksBlock__item-lottie"

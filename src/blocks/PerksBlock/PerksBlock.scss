@@ -41,6 +41,65 @@
 					mask-image: url("/src/img/blocks/perks/perk-2-glare.svg");
 				}
 			}
+
+			&._has-blocks {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				row-gap: 30px;
+				padding: 0 55px;
+			}
+			&-block {
+				position: relative;
+				._anchor {
+					position: absolute;
+					right: 15px;
+				}
+				._tooltip {
+					position: absolute;
+					display: none;
+					font-size: 15px;
+					border-radius: 12px;
+					box-shadow: 0 5px 10px rgba(15, 8, 50, 0.50);
+					pointer-events: none;
+					padding: 10px 12px;
+					&::after {
+						content: '';
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						margin-left: -5px;
+						border: 5px solid transparent;
+					}
+				}
+				&._options {
+					._anchor {
+						bottom: 17px;
+					}
+					._tooltip {
+						background-color: $blue-2;
+						&::after {
+							border-top-color: $blue-2;
+						}
+					}
+				}
+				&._hedge {
+					margin-top: 22px;
+					._anchor {
+						bottom: 14px;
+					}
+					._tooltip {
+						background-color: $violet-accent-2;
+						&::after {
+							border-top-color: $violet-accent-2;
+						}
+					}
+				}
+				&._title {
+					margin: 0 auto;
+				}
+			}
 		}
 		&-lottie {
 			position: absolute;
