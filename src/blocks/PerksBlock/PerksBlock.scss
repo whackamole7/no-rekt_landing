@@ -58,19 +58,25 @@
 				}
 				._tooltip {
 					position: absolute;
+					z-index: 100;
 					display: none;
-					font-size: 15px;
+					width: max-content;
 					border-radius: 12px;
 					box-shadow: 0 5px 10px rgba(15, 8, 50, 0.50);
 					pointer-events: none;
-					padding: 10px 12px;
-					&::after {
-						content: '';
+					&-content {
+						font-size: 15px;
+						border-radius: 12px;
+						padding: 10px 12px;
+					}
+					&-arrow {
 						position: absolute;
-						top: 100%;
-						left: 50%;
-						margin-left: -5px;
-						border: 5px solid transparent;
+						top: -6px;
+						z-index: -1;
+						width: 12px;
+						height: 12px;
+						box-shadow: 0 5px 10px rgba(15, 8, 50, 0.50);
+						transform: scaleY(1.4) rotate(45deg);
 					}
 				}
 				&._options {
@@ -78,9 +84,8 @@
 						bottom: 17px;
 					}
 					._tooltip {
-						background-color: $blue-2;
-						&::after {
-							border-top-color: $blue-2;
+						&-content, &-arrow {
+							background-color: $blue-2;
 						}
 					}
 				}
@@ -90,9 +95,8 @@
 						bottom: 14px;
 					}
 					._tooltip {
-						background-color: $violet-accent-2;
-						&::after {
-							border-top-color: $violet-accent-2;
+						&-content, &-arrow {
+							background-color: $violet-accent-2;
 						}
 					}
 				}
@@ -154,6 +158,17 @@
 						mask-image: url("/src/img/blocks/perks/perk-2-glare_mobile.svg");
 					}
 				}
+
+				&._has-blocks {
+					column-gap: 20px;
+					row-gap: 10px;
+					padding: 0 20px;
+				}
+				&-block {
+					&._title {
+						margin-top: 15px;
+					}
+				}
 			}
 			&-text {
 				font-size: 15px;
@@ -176,6 +191,23 @@
 		&__item {
 			width: 100%;
 			padding: 20px;
+
+			&-pic {
+				width: 100%;
+				&._has-blocks {
+					flex-direction: column;
+					padding: 0;
+				}
+				&-block {
+					&._options {
+						left: -50px;
+					}
+					&._hedge {
+						right: -35px;
+						margin-top: 0;
+					}
+				}
+			}
 		}
 	}
 }

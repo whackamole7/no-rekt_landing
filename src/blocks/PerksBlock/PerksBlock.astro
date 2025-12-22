@@ -89,8 +89,15 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 								alt="Hint"
 							/>
 						</div>
-						<div class="_tooltip" data-tooltip-type="tooltip">
-							Pay a fixed premium <br />and stay protected for <br />a chosen time period
+						<div
+							class="_tooltip"
+							data-tooltip-type="tooltip"
+							data-tooltip-placement="bottom-start"
+						>
+							<div class="_tooltip-arrow" />
+							<div class="_tooltip-content">
+								Pay a fixed premium <br />and stay protected for <br />a chosen time period
+							</div>
 						</div>
 					</div>
 					<div class="PerksBlock__item-pic-block _hedge" data-tooltip-type="trigger">
@@ -107,8 +114,15 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 								alt="Hint"
 							/>
 						</div>
-						<div class="_tooltip" data-tooltip-type="tooltip">
-							No upfront premium. Costs <br />apply only on hedge entry/<br />exit plus leverage fees
+						<div
+							class="_tooltip"
+							data-tooltip-type="tooltip"
+							data-tooltip-placement="bottom-end"
+						>
+							<div class="_tooltip-arrow" />
+							<div class="_tooltip-content">
+								No upfront premium. Costs <br />apply only on hedge entry/<br />exit plus leverage fees
+							</div>
 						</div>
 					</div>
 					<div class="PerksBlock__item-pic-block _title">
@@ -131,3 +145,7 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 		</div>
 	</div>
 </section>
+
+<script>
+	import "./PerksBlock";
+</script>
